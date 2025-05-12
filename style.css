@@ -13,6 +13,7 @@
 :root {
     --primary-color: #e0e0e0;
     --heading-font-size: 8vh;
+    --secoundry-font-family:'ChalkFont2';
 }
 
 * {
@@ -187,16 +188,69 @@ body {
 }
 
 .About {
-    height: 90vh;
+    height: 100%;
     width: 90%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
     border: 1px solid var(--primary-color);
     margin: 2vh 6vh;
     border-radius: 20px;
     font-family: 'ChalkFont', "Finger Paint";
+}
+
+.about {
+  color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+  background-color: transparent;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.about-title {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  color: #f4f4f4;
+  text-shadow: 2px 2px #000;
+}
+
+.about-tagline {
+  font-size: 1.3rem;
+  margin-bottom: 40px;
+  color: #ddd;
+  font-family: var(--secoundry-font-family);
+}
+
+.about-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.about-card {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 2px dashed #fff;
+  padding: 20px;
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-card:hover {
+  transform: scale(1.05);
+}
+
+.about-card .card-heading {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  background-color: transparent;
+}
+
+.about-card p {
+  font-size: 1rem;
+  color: #f0f0f0;
+  font-family: var(--secoundry-font-family);
+  background-color: transparent;
 }
 
 .projects {

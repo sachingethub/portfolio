@@ -49,7 +49,32 @@
     </div>
   </div>
   <div class="About" id="about">
-    <p>About Me</p>
+    <section class="about">
+      <div class="container">
+        <p class="about-title">Beyond the Screen</p>
+        <p class="about-tagline">Life isn't just code and keys — here's what makes me feel alive.</p>
+
+        <div class="about-cards">
+          <div class="about-card">
+            <div class="card-heading">🎬 Movies & Web Series</div>
+            <p>I love watching movies and web series, especially with friends — it helps me chill and take a break from
+              everything going on.</p>
+          </div>
+          <div class="about-card">
+            <div class="card-heading">🎧 Music</div>
+            <p>I usually put on some lo-fi or indie music when I code — it just helps me stay focused and in the zone.</p>
+          </div>
+          <div class="about-card">
+            <div class="card-heading">📷 Capturing Moments</div>
+            <p>I like taking photos sometimes — just to capture good moments or stuff that feels special.</p>
+          </div>
+          <div class="about-card">
+            <div class="card-heading">⚽ Sports & Games</div>
+            <p>I enjoy playing football and cricket whenever I get the chance, and I’m always up for gaming with friends.</p>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
   <div class="Skills" id="skill">
     <p> Skills</p>
@@ -221,12 +246,13 @@
         </div>
       </div>
 
-<form class="contact-chalk-form" id="contactForm">
-  <input type="text" name="name" placeholder="Your Name" id="name" class="contact-chalk-input" required>
-  <input type="email" name="email" placeholder="Your Email" id="email" class="contact-chalk-input" required>
-  <textarea name="message" placeholder="Your Message" id="message" class="contact-chalk-input contact-chalk-textarea" required></textarea>
-  <button type="submit" class="contact-chalk-button contact-chalk-submit">Send Message</button>
-</form>
+      <form class="contact-chalk-form" id="contactForm">
+        <input type="text" name="name" placeholder="Your Name" id="name" class="contact-chalk-input" required>
+        <input type="email" name="email" placeholder="Your Email" id="email" class="contact-chalk-input" required>
+        <textarea name="message" placeholder="Your Message" id="message"
+          class="contact-chalk-input contact-chalk-textarea" required></textarea>
+        <button type="submit" class="contact-chalk-button contact-chalk-submit">Send Message</button>
+      </form>
 
 
     </div>
@@ -241,25 +267,25 @@
   </footer>
   <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
   <script>
-    (function() {
+    (function () {
       emailjs.init("YJRWgwrUJpRTRWTw1"); // Your public key
     })();
-  
-    document.getElementById("contactForm").addEventListener("submit", function(event) {
+
+    document.getElementById("contactForm").addEventListener("submit", function (event) {
       event.preventDefault();
       const form = this;
-  
+
       emailjs.sendForm("service_5d8ht4m", "template_5lrrloj", form)
-        .then(function(response) {
+        .then(function (response) {
           console.log("SUCCESS!", response.status, response.text);
           alert("Message sent successfully!");
           form.reset(); // ✅ Clears the form fields
-        }, function(error) {
+        }, function (error) {
           console.error("FAILED...", error);
           alert("Failed to send message.");
         });
     });
-  </script>  
+  </script>
 </body>
 
 </html>
