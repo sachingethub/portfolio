@@ -108,17 +108,21 @@ body {
 }
 
 .social ul li {
-    padding: 10px 15px;
+    padding: 8px 12px;
     border-radius: 15px;
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border: 1px solid var(--primary-color);
 }
 
 .social li a {
-    font-size: 20px;
+    font-size: 25px;
     font-family: "ChalkFont2", Verdana, Geneva, Tahoma, sans-serif;
 }
-
+.information  .my-photo1{
+    display: none;
+}
 .information .otherinfo {
     height: 100%;
     width: 50%;
@@ -185,6 +189,103 @@ body {
 .my-photo img {
     height: 80%;
     width: 80%;
+}
+@media only screen and (max-width: 600px) {
+  .home {
+    width: 95%;
+    margin: 10px auto;
+    height: auto;
+  }
+
+  .home .navbar {
+    flex-direction: row;
+    height: auto;
+    gap: 10px;
+    padding: 20px;
+  }
+
+  .navbar .link {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    display: none;
+  }
+
+  .link li {
+    font-size: 3vh;
+  }
+
+  .home .information {
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    padding: 0;
+  }
+
+  .information .social,
+  .information .my-photo,
+  .information .otherinfo {
+    width: 90%;
+    text-align: center;
+    padding: 0;
+  }
+
+  .social ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .social ul li {
+    height: 6vh;
+    padding: 6px 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .social ul li a{
+    font-size: 20px;
+  }
+
+  .otherinfo .hii {
+    font-size: 3.5vh;
+  }
+  .hii span{
+    font-size: 5vh;
+  }
+  .otherinfo p {
+    font-size: 18px;
+  }
+
+  .otherinfo p span {
+    font-size: 18px;
+  }
+
+  .otherinfo .othercontact {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .othercontact a {
+    width: 40%;
+    text-align: center;
+  }
+
+  .information .my-photo {
+    display: none;
+  }
+  .information .my-photo1{
+    display: block;
+  }
+  .my-photo1 img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
 }
 
 .Skills {
