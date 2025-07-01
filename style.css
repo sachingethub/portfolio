@@ -104,16 +104,16 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 15px;
 }
 
 .social ul li {
-    padding: 8px 12px;
+    padding: 7px 9px;
     border-radius: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid var(--primary-color);
+    border: 1px dashed #f0f0f0;
 }
 
 .social li a {
@@ -174,7 +174,7 @@ body {
 .othercontact a {
     padding: 10px 10px;
     font-size: 20px;
-    border: 1px solid var(--primary-color);
+    border: 1px dashed #f0f0f0;
     border-radius: 15px;
     font-family: "ChalkFont2", Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -373,13 +373,69 @@ body {
     gap: 20px;
 }
 
-.flip-card-front p {
+.flip-card-front .skill-heading {
     font-size: 8vh;
 }
-
+.flip-card-front .tap-me{
+    display: none;
+}
 .flip-card-back {
     transform: rotateY(180deg);
 }
+@media only screen and (max-width: 600px) {
+  .Skills {
+    height: auto;
+    width: 95%;
+    margin: 10px auto;
+    padding: 20px 10px;
+  }
+
+  .Skills p {
+    font-size: 5vh;
+    text-align: center;
+  }
+
+  .Skills .skill-cards {
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    width: 100%;
+  }
+
+  .skill-cards .flip-card {
+    width: 90%;
+    height: 280px;
+  }
+  .flip-card-front{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: space-between;
+    padding: 10px;
+  }
+  .flip-card-front .tap-me{
+    display: block;
+    font-size: 1vh;
+    margin-left: 58vw;
+    border: 1px dashed white;
+    padding: 5px 0;
+    border-radius: 8%;
+  }
+
+  .flip-card-front .skill-heading {
+    font-size: 3.5vh;
+    text-align: center;
+  }
+
+  .flip-card-back .custom-list {
+    font-size: 14px;
+    padding-left: 10px;
+    gap: 10px;
+  }
+}
+
 .About {
     height: 100%;
     width: 90%;
@@ -476,7 +532,7 @@ body {
 .projects-cards .project-card {
     height: 100%;
     width: 32%;
-    border: 2px dashed rgba(255, 255, 255, 0.3);
+    border: 1.5px dashed #f0f0f0;
     padding: 1.5rem;
     border-radius: 5px;
     transition: transform 0.3s;
@@ -496,7 +552,7 @@ body {
     width: 100%;
     height: 180px;
     margin: 1rem 0;
-    border: 1px dashed rgba(255, 255, 255, 0.2);
+    border: 1px dashed #f0f0f0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -524,6 +580,7 @@ body {
 .project-links .chalk-button {
     padding: 10px 20px;
     border-radius: 10px;
+    border: 1px dashed #f0f0f0;
 }
 
 .project-links .chalk-button:hover {
