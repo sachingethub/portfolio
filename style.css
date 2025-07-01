@@ -52,7 +52,8 @@ body {
 .About,
 .Skills,
 .Contact,
-.projects-cards {
+.flip-card,
+.project-card {
     animation: appear 5s linear;
     animation-timeline: view();
     animation-range: entry 0% cover 30%;
@@ -622,8 +623,8 @@ body {
     width: 95%;
     margin: 10px auto;
     padding: 20px 10px;
-    border: 1px solid white;
-    border-radius: 20px;
+    /* border: 1px solid white;
+    border-radius: 20px; */
   }
 
   .projects .project-heading {
@@ -631,6 +632,7 @@ body {
     text-align: center;
     height: auto;
     margin-bottom: 1rem;
+    display: block;
   }
 
   .projects .projects-cards {
@@ -639,16 +641,19 @@ body {
     justify-content: center;
     gap: 10px;
   }
+  .projects-cards :nth-child(5){
+    display: none;
+  }
 
   .projects-cards .project-card {
-    width: 48%;
+    width: 70%;
     height: 100%;
     box-sizing: border-box;
     padding: 0px;
   }
 
   .project-title {
-    font-size:10px;
+    font-size:15px;
     text-align: center;
     padding: 10px 5px;
     margin: 0;
@@ -657,7 +662,7 @@ body {
   .project-sketch {
     height: 100px;
     width: 90%;
-    margin: 0px 8px;
+    margin: 0px 13px;
   }
 
   .project-desc {
