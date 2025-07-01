@@ -35,7 +35,28 @@ body {
     height: 100%;
     width: 100%;
 }
+@keyframes appear {
+    from {
+        opacity: 0;
+        scale: 0.5;
+    }
 
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+.home,
+.about-card,
+.About,
+.Skills,
+.Contact,
+.projects-cards {
+    animation: appear 5s linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%;
+}
 .home {
     height: 90vh;
     width: 90%;
@@ -201,14 +222,16 @@ body {
     flex-direction: row;
     height: auto;
     gap: 10px;
-    padding: 20px;
+    padding: 10px 20px 0px 20px;
   }
-
   .navbar .link {
     flex-direction: column;
     gap: 10px;
     align-items: center;
     display: none;
+  }
+  .logo a{
+    font-size: 6vh;
   }
 
   .link li {
@@ -235,6 +258,7 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
+    padding: 10px;
   }
 
   .social ul li {
@@ -588,10 +612,18 @@ body {
     color: black;
 }
 @media only screen and (max-width: 600px) {
+    .about{
+        padding: 25px 20px;
+    }
+    .about-title{
+        font-size: 5vh;
+    }
   .projects {
     width: 95%;
     margin: 10px auto;
     padding: 20px 10px;
+    border: 1px solid white;
+    border-radius: 20px;
   }
 
   .projects .project-heading {
@@ -781,13 +813,16 @@ body {
         min-height: 100%;
         width: 90vw;
         overflow: hidden;
+        justify-content:unset;
     }
     .contact-title{
         font-size: 3rem;
         margin-top: 2rem;
+        margin-bottom: 1.5rem;
     }
     .contact-container{
         padding: 0;
+        gap: 1.5rem;
     }
      .contact-info{
         display: flex;
@@ -802,7 +837,7 @@ body {
         font-size: 20px;
     }
     .contact-social-links{
-        margin-top: 15px;
+        margin-top: 10px;
     }
     .contact-chalk-form{
         margin-left:20px;
@@ -834,24 +869,4 @@ body {
     text-decoration: underline;
 }
 
-@keyframes appear {
-    from {
-        opacity: 0;
-        scale: 0.5;
-    }
 
-    to {
-        opacity: 1;
-        scale: 1;
-    }
-}
-
-.home,
-.About,
-.Skills,
-.Contact,
-.projects-cards {
-    animation: appear 5s linear;
-    animation-timeline: view();
-    animation-range: entry 0% cover 30%;
-}
