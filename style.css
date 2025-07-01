@@ -138,7 +138,7 @@ body {
 }
 
 .hii span {
-    color: blue;
+    color: rgb(0, 0, 255);
     font-size: var(--heading-font-size);
 }
 
@@ -509,7 +509,7 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    margin: 2vh 6vh;
+    margin: 2vh 2vh;
 }
 
 .projects .project-heading {
@@ -586,6 +586,67 @@ body {
 .project-links .chalk-button:hover {
     background-color: var(--primary-color);
     color: black;
+}
+@media only screen and (max-width: 600px) {
+  .projects {
+    width: 95%;
+    margin: 10px auto;
+    padding: 20px 10px;
+  }
+
+  .projects .project-heading {
+    font-size: 5vh;
+    text-align: center;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+
+  .projects .projects-cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .projects-cards .project-card {
+    width: 48%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 0px;
+  }
+
+  .project-title {
+    font-size:10px;
+    text-align: center;
+    padding: 10px 5px;
+    margin: 0;
+  }
+
+  .project-sketch {
+    height: 100px;
+    width: 90%;
+    margin: 0px 8px;
+  }
+
+  .project-desc {
+    font-size: 14px;
+    min-height: auto;
+    text-align: left;
+    display: none;
+  }
+
+  .project-links {
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0px ;
+  }
+
+  .project-links .chalk-button {
+    font-size: 6px;
+    padding: 5px 8px;
+  }
 }
 
 .Contact {
@@ -789,9 +850,8 @@ body {
 .About,
 .Skills,
 .Contact,
-.projects,
-.project-card {
+.projects-cards {
     animation: appear 5s linear;
     animation-timeline: view();
-    animation-range: entry 0% cover 40%;
+    animation-range: entry 0% cover 30%;
 }
