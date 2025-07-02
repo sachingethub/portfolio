@@ -199,7 +199,11 @@ body {
     border-radius: 15px;
     font-family: "ChalkFont2", Verdana, Geneva, Tahoma, sans-serif;
 }
-
+.othercontact a:hover{
+  background-color: white;
+  color: black;
+  font-family: "ChalkFont", Verdana, Geneva, Tahoma, sans-serif;
+}
 .information .my-photo {
     height: 100%;
     width: 30%;
@@ -221,21 +225,23 @@ body {
   .home .navbar {
     flex-direction: row;
     height: auto;
-    gap: 10px;
-    padding: 10px 20px 0px 20px;
+    padding:20px 0px ;
+    margin: 0;
+    justify-content: unset;
   }
   .navbar .link {
-    flex-direction: column;
-    gap: 10px;
+    flex-direction: row;
     align-items: center;
-    display: none;
+    gap: 0;
+
   }
   .logo a{
     font-size: 6vh;
+    display: none;
   }
 
   .link li {
-    font-size: 3vh;
+    font-size:1.7vh;
   }
 
   .home .information {
